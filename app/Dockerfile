@@ -1,15 +1,15 @@
-# Base image olarak Python kullan
+# Base image olarak Python kullandım
 FROM python:3.9-slim
 
-# Çalışma dizinini ayarla
+# Çalışma dizinini ayarladım
 WORKDIR /app
 
-# Uygulama dosyalarını container'a kopyala
+# Uygulama dosyalarını container'a kopyaladım
 COPY . .
 
-# Gerekli bağımlılıkları yükle
+# Gerekli bağımlılıkları yükledim
 RUN pip install flask
 
-# Uygulamayı başlat
+# Uygulamayı başlattım
 CMD ["python", "app.py"]
 
