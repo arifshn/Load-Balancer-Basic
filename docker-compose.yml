@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  flask-app-1:
+    build: ./app
+    container_name: flask-app-1
+    ports:
+      - "5001:5000"  # Dışarıya açılan port:container içindeki port
+
+  flask-app-2:
+    build: ./app
+    container_name: flask-app-2
+    ports:
+      - "5002:5000"  # Dışarıya açılan port:container içindeki port
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-load-balancer
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"  # Nginx için 80 numaralı portu açıyoruz
+    depends_on:
+      - flask-app-1
+      - flask-app-2
+
