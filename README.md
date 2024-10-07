@@ -18,7 +18,7 @@ Proje, temel bir Load Balancer mantığını göstermek için tasarlanmıştır.
    Oluşturduğum Docker imajını kullanarak bir konteyner oluşturdum ve çalıştırdım. 
 
 4. **Çalışma Kontrolü**:
-   Konteyneri çalıştırdıktan sonra, uygulamanın Docker Hub üzerinde çalıştığını doğruladım. Ayrıca, localhost ile deneme yaparak ekran çıktısını gözlemledim.
+   Konteyneri çalıştırdıktan sonra , uygulamanın Docker Hub üzerinde çalıştığını doğruladım. Ayrıca, localhost ile deneme yaparak ekran çıktısını gözlemledim.
 
 5. **Load Balancer Mantığını Anlama**:
    Localhost üzerindeki web sayfasını yenileyerek Load Balancer'ın çalışma mantığını kavradım. Uygulama, istekleri farklı sunuculara yönlendirerek yük dengeleme işlevini gerçekleştirdi.
